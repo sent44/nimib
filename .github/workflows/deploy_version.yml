@@ -1,0 +1,13 @@
+name: Deploy new version tag
+on:
+  workflow_call:
+    inputs:
+        version:
+            required: true
+            type: number
+jobs:
+    deploy:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Test
+              run: echo  The tags are ${{ inputs.version }}
