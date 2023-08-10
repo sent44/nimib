@@ -1,10 +1,10 @@
 name: Deploy new version tag
 on:
-  workflow_call:
-    inputs:
-        version:
-            required: true
-            type: number
+    workflow_dispatch:
+        inputs:
+            version:
+                required: true
+                type: number
 jobs:
     deploy:
         runs-on: ubuntu-latest
